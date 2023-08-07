@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import Editor from "./Editor";
+import Previewer from "./Previewer";
 
 import "./App.css";
 
@@ -50,6 +51,7 @@ const App = () => {
         markdown={markdown}
         handleChange={handleChange}
       />
+      <Previewer markdown={markdown} />
     </div>
   );
 };
