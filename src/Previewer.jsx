@@ -5,7 +5,12 @@ import { marked } from "marked";
 import "./Previewer.css";
 
 const Previewer = ({ markdown }) => {
-  const html = parse(marked.parse(markdown));
+  const html = parse(
+    marked
+      .setOptions({ breaks: true })
+      .parse(markdown)
+  );
+
   return (
     <div id="previewer-container">
       <h3>
